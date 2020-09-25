@@ -5,3 +5,13 @@ services:
 script:
     - docker build -t michelecava/node .
     - docker images michelecava/nodes
+
+before_deploy:
+    - docker login -u mcavaliere@kemp.ax -p Hannspee123?
+
+deploy:
+    provider: script
+    script: docker push michelecava/node
+    on:
+        branch: master
+    
