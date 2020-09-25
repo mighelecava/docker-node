@@ -7,7 +7,7 @@ script:
     - docker images michelecava/nodes
 
 before_deploy:
-    - docker login -u michelecava -p Hannspee123?
+    - docker login -u michelecava -p hP67o48UgkwD
 
 deploy:
     provider: script
